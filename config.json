@@ -1,0 +1,12 @@
+{
+  "repositories": [
+    {
+      "url": "https://github.com/Dr-TSNG/ZygiskNext",
+      "keyword": ""
+    },
+    {
+      "url": "https://github.com/RikkaApps/Sui",
+      "keyword": "zygisk"
+    }
+  ]
+}
