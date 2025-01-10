@@ -63,7 +63,7 @@ def get_latest_release(repo_info):
     _, _, _, username, repo = repo_url.rstrip('/').split('/')
     
     # 获取 GitHub API token
-    github_token = os.environ.get('GITHUB_API_TOKEN')
+    github_token = os.environ.get('GH_TOKEN')
     
     # 准备请求头
     headers = {}
