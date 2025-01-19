@@ -1,17 +1,11 @@
-- 修复纯 32 位 arm 设备支持
-- 增加 MKSU 支持
-- WebUI 适配 MMRL
-- WebUI 显示是否使用 tango 转译
-- 其他细微变更
+- 修复一些兼容性问题
+- 修复可能导致系统卡死的问题
 
 ---
 
-- Fixed pure 32-bit arm device support
-- Added MKSU support
-- WebUI adapted to MMRL
-- WebUI shows whether tango translator is used
-- Other minor changes
+- Fixed some compatibility issues
+- Fixed issues that may cause the system to freeze
 
 ---
 
-SHA256: c2a5d4b61aca9540586c43c3a93dc968c188c25bca5bc0440e996889a18eb37d
+SHA256: 319d31624e748f19d9c4249a592195448c28106fe99c739bb78643eae9aee2c8
