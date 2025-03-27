@@ -1,11 +1,11 @@
-- 修复一些兼容性问题
-- 修复可能导致系统卡死的问题
+对 Magisk用户：创建 `/data/adb/zygisksu/no_mount_znctl` 可以跳过 cli 挂载，但后续调用时需手动输入完整路径
+修复一些其他问题
 
 ---
 
-- Fixed some compatibility issues
-- Fixed issues that may cause the system to freeze
+Creating `/data/adb/zygisksu/no_mount_znctl` allows skipping the CLI mount, but subsequent calls require manually entering the full path.
+Fixed some other issues
 
 ---
 
-SHA256: 319d31624e748f19d9c4249a592195448c28106fe99c739bb78643eae9aee2c8
+SHA256: 18e8876e11f123d592082aea1f05f6423a64cf292c76a375b525bf1ba1e9bc20
