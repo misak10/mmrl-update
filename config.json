@@ -7,6 +7,10 @@
     {
       "url": "https://github.com/RikkaApps/Sui",
       "keyword": "zygisk"
+    },
+    {
+      "url": "https://github.com/eritpchy/FingerprintPay",
+      "keyword": "zygisk.*all"
     }
   ]
 }
