@@ -1,11 +1,13 @@
-对 Magisk用户：创建 `/data/adb/zygisksu/no_mount_znctl` 可以跳过 cli 挂载，但后续调用时需手动输入完整路径
-修复一些其他问题
+- 同步上游代码
+- 增加 frida 兼容：如 frida server 与 ZN 不兼容，可创建 `/data/adb/zygisksu/frida_compat` 启用兼容功能，重启生效
+- 修复一些其他问题
 
 ---
 
-Creating `/data/adb/zygisksu/no_mount_znctl` allows skipping the CLI mount, but subsequent calls require manually entering the full path.
-Fixed some other issues
+- Sync with upstream code
+- Add Frida compatibility: If Frida server is incompatible with ZN, you can create `/data/adb/zygisksu/frida_compat` to enable compatibility. Reboot to take effect.  
+- Fix some other issues
 
 ---
 
-SHA256: 18e8876e11f123d592082aea1f05f6423a64cf292c76a375b525bf1ba1e9bc20
+SHA256: 3dca8d3ba96259677d9af69212ba53dc82198f7c6d87f6a3872ec521dbfb76dc
