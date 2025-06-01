@@ -11,6 +11,18 @@
     {
       "url": "https://github.com/eritpchy/FingerprintPay",
       "keyword": "zygisk.*all"
+    },
+    {
+      "url": "https://github.com/firerpa/lamda",
+      "keyword": "magisk"
+    },
+    {
+      "url": "https://github.com/WSTxda/ViPERFX_RE",
+      "keyword": ""
+    },
+    {
+      "url": "https://github.com/PerformanC/ReZygisk",
+      "keyword": "release"
     }
   ]
 }
