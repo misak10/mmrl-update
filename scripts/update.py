@@ -6,6 +6,7 @@ import tempfile
 import shutil
 from pathlib import Path
 import io
+import re
 
 def repack_module(zip_url, repo_name):
     with tempfile.TemporaryDirectory() as temp_dir:
@@ -81,15 +82,18 @@ def get_latest_release(repo_info):
         zip_url = None
         if keyword:
             for asset in release_data["assets"]:
-                if asset["name"].endswith(".zip") and keyword in asset["name"].lower():
+                if asset["name"].endswith(".zip") and re.search(keyword, asset["name"], re.IGNORECASE):
                     zip_url = asset["browser_download_url"]
                     break
+            if not zip_url:
+                print(f"[WARN] {repo}: 未找到匹配关键字 '{keyword}' 的zip文件，assets: {[a['name'] for a in release_data['assets']]}")
         else:
             # 如果没有关键词，取第一个zip文件
             zip_url = next((asset["browser_download_url"] for asset in release_data["assets"] 
                           if asset["name"].endswith(".zip")), None)
         
         if not zip_url:
+            print(f"[ERROR] {repo}: 没有找到可用的zip文件，跳过该仓库。")
             return None
             
         # 提取版本号并生成版本代码
@@ -134,6 +138,8 @@ def get_latest_release(repo_info):
         update_info["changelog"] = f"https://raw.githubusercontent.com/misak10/mmrl-update/main/src/{repo_name}/changelog.md"
         
         return update_info
+    else:
+        print(f"[ERROR] {repo}: 获取release信息失败，status_code={response.status_code}")
     return None
 
 def main():

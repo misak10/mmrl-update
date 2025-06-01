@@ -1,0 +1,95 @@
+﻿2025-06-01T05:06:01.6027800Z ##[group]Run actions/checkout@v3
+2025-06-01T05:06:01.6028833Z with:
+2025-06-01T05:06:01.6029249Z   repository: misak10/mmrl-update
+2025-06-01T05:06:01.6029901Z   token: ***
+2025-06-01T05:06:01.6030288Z   ssh-strict: true
+2025-06-01T05:06:01.6030702Z   persist-credentials: true
+2025-06-01T05:06:01.6031166Z   clean: true
+2025-06-01T05:06:01.6031581Z   sparse-checkout-cone-mode: true
+2025-06-01T05:06:01.6032065Z   fetch-depth: 1
+2025-06-01T05:06:01.6032462Z   fetch-tags: false
+2025-06-01T05:06:01.6032850Z   lfs: false
+2025-06-01T05:06:01.6033223Z   submodules: false
+2025-06-01T05:06:01.6033634Z   set-safe-directory: true
+2025-06-01T05:06:01.6034281Z ##[endgroup]
+2025-06-01T05:06:01.7661667Z Syncing repository: misak10/mmrl-update
+2025-06-01T05:06:01.7663430Z ##[group]Getting Git version info
+2025-06-01T05:06:01.7664179Z Working directory is '/home/runner/work/mmrl-update/mmrl-update'
+2025-06-01T05:06:01.7665161Z [command]/usr/bin/git version
+2025-06-01T05:06:01.7758308Z git version 2.49.0
+2025-06-01T05:06:01.7787140Z ##[endgroup]
+2025-06-01T05:06:01.7804343Z Temporarily overriding HOME='/home/runner/work/_temp/ddbe41ab-70a9-4f6a-a172-a586c60c9eca' before making global git config changes
+2025-06-01T05:06:01.7805772Z Adding repository directory to the temporary git global config as a safe directory
+2025-06-01T05:06:01.7807845Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/mmrl-update/mmrl-update
+2025-06-01T05:06:01.7845764Z Deleting the contents of '/home/runner/work/mmrl-update/mmrl-update'
+2025-06-01T05:06:01.7850560Z ##[group]Initializing the repository
+2025-06-01T05:06:01.7855160Z [command]/usr/bin/git init /home/runner/work/mmrl-update/mmrl-update
+2025-06-01T05:06:01.7945922Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-06-01T05:06:01.7947100Z hint: is subject to change. To configure the initial branch name to use in all
+2025-06-01T05:06:01.7947999Z hint: of your new repositories, which will suppress this warning, call:
+2025-06-01T05:06:01.7949524Z hint:
+2025-06-01T05:06:01.7950027Z hint: 	git config --global init.defaultBranch <name>
+2025-06-01T05:06:01.7950609Z hint:
+2025-06-01T05:06:01.7951170Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-06-01T05:06:01.7952053Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-06-01T05:06:01.7952840Z hint:
+2025-06-01T05:06:01.7953489Z hint: 	git branch -m <name>
+2025-06-01T05:06:01.7956910Z Initialized empty Git repository in /home/runner/work/mmrl-update/mmrl-update/.git/
+2025-06-01T05:06:01.7966535Z [command]/usr/bin/git remote add origin https://github.com/misak10/mmrl-update
+2025-06-01T05:06:01.8000398Z ##[endgroup]
+2025-06-01T05:06:01.8001602Z ##[group]Disabling automatic garbage collection
+2025-06-01T05:06:01.8004197Z [command]/usr/bin/git config --local gc.auto 0
+2025-06-01T05:06:01.8034535Z ##[endgroup]
+2025-06-01T05:06:01.8035734Z ##[group]Setting up auth
+2025-06-01T05:06:01.8040893Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-06-01T05:06:01.8071533Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-06-01T05:06:01.8427606Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-06-01T05:06:01.8458176Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-06-01T05:06:01.8715191Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-06-01T05:06:01.8752620Z ##[endgroup]
+2025-06-01T05:06:01.8753854Z ##[group]Fetching the repository
+2025-06-01T05:06:01.8761986Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +db39599c95faafdb27fb3fc6698df85e762763c9:refs/remotes/origin/main
+2025-06-01T05:06:02.1252417Z remote: Enumerating objects: 16, done.        
+2025-06-01T05:06:02.1254237Z remote: Counting objects:   6% (1/16)        
+2025-06-01T05:06:02.1255989Z remote: Counting objects:  12% (2/16)        
+2025-06-01T05:06:02.1257187Z remote: Counting objects:  18% (3/16)        
+2025-06-01T05:06:02.1257915Z remote: Counting objects:  25% (4/16)        
+2025-06-01T05:06:02.1259249Z remote: Counting objects:  31% (5/16)        
+2025-06-01T05:06:02.1260424Z remote: Counting objects:  37% (6/16)        
+2025-06-01T05:06:02.1261514Z remote: Counting objects:  43% (7/16)        
+2025-06-01T05:06:02.1262657Z remote: Counting objects:  50% (8/16)        
+2025-06-01T05:06:02.1263662Z remote: Counting objects:  56% (9/16)        
+2025-06-01T05:06:02.1264915Z remote: Counting objects:  62% (10/16)        
+2025-06-01T05:06:02.1266199Z remote: Counting objects:  68% (11/16)        
+2025-06-01T05:06:02.1267526Z remote: Counting objects:  75% (12/16)        
+2025-06-01T05:06:02.1268720Z remote: Counting objects:  81% (13/16)        
+2025-06-01T05:06:02.1269723Z remote: Counting objects:  87% (14/16)        
+2025-06-01T05:06:02.1270726Z remote: Counting objects:  93% (15/16)        
+2025-06-01T05:06:02.1271646Z remote: Counting objects: 100% (16/16)        
+2025-06-01T05:06:02.1272604Z remote: Counting objects: 100% (16/16), done.        
+2025-06-01T05:06:02.1273580Z remote: Compressing objects:   8% (1/12)        
+2025-06-01T05:06:02.1274526Z remote: Compressing objects:  16% (2/12)        
+2025-06-01T05:06:02.1275474Z remote: Compressing objects:  25% (3/12)        
+2025-06-01T05:06:02.1279067Z remote: Compressing objects:  33% (4/12)        
+2025-06-01T05:06:02.1280148Z remote: Compressing objects:  41% (5/12)        
+2025-06-01T05:06:02.1281455Z remote: Compressing objects:  50% (6/12)        
+2025-06-01T05:06:02.1282483Z remote: Compressing objects:  58% (7/12)        
+2025-06-01T05:06:02.1283883Z remote: Compressing objects:  66% (8/12)        
+2025-06-01T05:06:02.1284932Z remote: Compressing objects:  75% (9/12)        
+2025-06-01T05:06:02.1285930Z remote: Compressing objects:  83% (10/12)        
+2025-06-01T05:06:02.1286915Z remote: Compressing objects:  91% (11/12)        
+2025-06-01T05:06:02.1288015Z remote: Compressing objects: 100% (12/12)        
+2025-06-01T05:06:02.1289546Z remote: Compressing objects: 100% (12/12), done.        
+2025-06-01T05:06:02.1290896Z remote: Total 16 (delta 0), reused 12 (delta 0), pack-reused 0 (from 0)        
+2025-06-01T05:06:02.1384541Z From https://github.com/misak10/mmrl-update
+2025-06-01T05:06:02.1387099Z  * [new ref]         db39599c95faafdb27fb3fc6698df85e762763c9 -> origin/main
+2025-06-01T05:06:02.1414597Z ##[endgroup]
+2025-06-01T05:06:02.1415484Z ##[group]Determining the checkout info
+2025-06-01T05:06:02.1417176Z ##[endgroup]
+2025-06-01T05:06:02.1418704Z ##[group]Checking out the ref
+2025-06-01T05:06:02.1422958Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2025-06-01T05:06:02.1477029Z Switched to a new branch 'main'
+2025-06-01T05:06:02.1480090Z branch 'main' set up to track 'origin/main'.
+2025-06-01T05:06:02.1487131Z ##[endgroup]
+2025-06-01T05:06:02.1520459Z [command]/usr/bin/git log -1 --format='%H'
+2025-06-01T05:06:02.1541776Z 'db39599c95faafdb27fb3fc6698df85e762763c9'
