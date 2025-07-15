@@ -9,6 +9,7 @@
 - 886e2f8396979781d82983f9536b76f75373d909 all `core`  logs on `release` builds
 - 8f70a1a451aaefbb92aa869f96a86c357d22b892 `mazoku` file
 - 61ece7ee4fe6bdfdd120772026891a69e40f1bf8 ccache from workflows
+- 7993278a5f9daec3edf9e676a4b14c68b2e5a584 outdated README translations
 
 ### Fixed
 
@@ -18,6 +19,30 @@
 - d498a9ab0177eb9087e7eef3978a22640f6cfaa5 Trigger module's `service.sh` in parallel
 - 3d79939d7bb30841c5f85013dfab9515fd1a4145 Not finding SoList related symbols with suffix
 - c37a5b1c8e0cfa00d3cec3875e42c0281c600462 Missing `status32` exit check
+- 0930c8cca4e48859706488e157a8796a7d7467d3 Magisk ReZygiskd code not checking against umount list with process name
+- d6961603fae72e0f069c408772435c801f1db62d sanitization of fds in Zygote
+- 0d60dc0ec04ef3629f4b6e4bf5ac4c60c021859b sending data to closed fd
+- 16c4d62cd83eb37e442cb37fc3d91091fcef4ca7 `solist_drop_so_path` comment
+- 57cd28111922448b4c6c36292b12286d89028e2e missing 64-bit `machikado` in unsigned builds
+- 62481ca2b6b884a7693c3a3a7a074319f9519600 wrong logic for fd closing in `libzygisk.so`
+- d455117c49435542661b91fe3da81b810eec7f22 `libzygisk.so` injection when `libdl.so` in not in `/apex/...`
+- 6261466e44c0511f4336d2459e8256f938be1e96 Zygisk module loading
+- 70697be9a5230b3e254a9df68b8cba599dbbab90 kernelland bug for `ptrace_message` leak
+- c023da0fd6a2b5e5d0b50c440dc7e0e03f723f5b `Code of Conduct` URL in templates
+- ec705fb26093702ff6af7bb63bde9edc7ebd79ef removal all of PLT hooks unconditionally
+- 57f985292efbb750c3477f4f3a590766a1f0f322 dir fd leak in ReZygiskd
+- 4f35e06ac4aad582d13d9343e15e08293063c729 gradle building system warnings
+- c786790b0f031dede3cc432763562f71eeea97eb Trusted CI workflow in forks
+- cd4784376edeeedd663ecca88af19108271af834 out-of-bounds write in WSA in ReZygiskd
+- d111a2dfc52b1aa74d3bf6f1c6120598c855acb6 perfetto related `zygote64` crashes
+- f9a23a2882f96dc8ccbf3f386ce05f7ee4ca303d SoInfo code give up if `find_containing_library` exists
+- a0ab02cedc16da822a5b17e37ca8a8634d731094 maps futile hiding code never reached
+- a0ab02cedc16da822a5b17e37ca8a8634d731094 not dropping SoInfo of undlclosed modules
+- b7fe7b3dbed7d7f1220119e8260de189d5be920d 48238521dfbea98ed9c63cfa5a9e2fbb50f52c74 root related mounts being leaked
+- 6c05527ffa3f6a76dbb988bda4b20bbab656b4d8 Zygisk modules not being recognized in WSA
+- fa9adcf3b5efb0f11a1ff185a59494fdd3b12025 `FORCE_DENYLIST_UNMOUNT` behavior
+- 9a3b2f4a799b80d14719ed7804b6e8f91c8d40eb KernelSU variant detection
+- b6f02b39b3410ee744432c00f15c75125dc9dca8 KernelSU Next manager runtime switch recognition
 
 ### Updated
 
@@ -25,6 +50,13 @@
 - df0f2ce5a22eeca44cadd67ac12196bea02310dd c9c15bf120b5f8f207bf881e50ddea59a71c8e47 LSplt
 - 47f230d0c2f8c9ef9cb42e8b5447f580e123c053 19952e6d0376abb1bffc1f070e115f99b6bad076 954c3a9cc50670ccf23efe0639d90571a5dcb452 Workflows
 - 37a667ce2a53c87992f10b93a79180e13188ad2b b1e217b665aa033dfa8f8579eaaa50d2352d0377 6ca4b7276271712ceaa1bf607525524753652785 980bf2ab4c2793bca8e37859bc25bc627070b3de 9aafc279d5f7a492acff3f0de1ddbc2ecc8d8d9c Compilation commands
+- 7993278a5f9daec3edf9e676a4b14c68b2e5a584 README translations to match `README.md`
+- 98f88916b80f95aa2cc3bc808c255618f0d432cf module ID
+- 2f589d0edabadf5ddbf0170b7d1a2ff465636a13 LSPlt source
+- c975722795473941abe4888528b158e348ca28b0 PLT hooks unload code
+- 63f29f07712b47511794ffe5a8c39d955f6f1bd8 `setup-gradle` action
+- 295a62b649ad331e207c0d177ab79d1879aef92d `tr_TR` translation credits
+- bc1b757bb8ed8e3d85b4b00e15315dda11005eef `CMD_HOOK_MODE` and `CMD_GET_MANAGER_UID` values
 
 ### Added
 
@@ -46,6 +78,17 @@
 - bc6cf67c7be00461a70e6a4683eac81aff72a17b Turkish README
 - 92e2f528a905e27dfa321e4131f6125355fa8edb 2d80ce6935562637e156a42ea0636d9f2c5320f8 bd5eb4c7958557ea841b855409ec6ede9e43a2c0 Android 9 support
 - 221b4fc9973f4744efcef5766581ad36cb810b15 French README
+- https://github.com/PerformanC/ReZygisk/commit/96123aa53ce8c462c3fe7f18046a0a4c9bcae6b2 support to 32-bit only environments
+- 68f1b1fb35ba732fddda85c37f1995d48a01979f `machikado` per architecture
+- bdcb67b1f9699d2d547a6b0bdb1e62d42640ca37 Japanese README
+- 4de1b443cf98d63b2acd5b24b612a3c5ceedcd6a WebUI
+- ea49b887abd681043e5cbcf90ac3c14dc2ae35ec signed CIs for `main` branch
+- ed347e879e562058e8e93af53619de2243009221 `misaki.sig` integrity file
+- 62481ca2b6b884a7693c3a3a7a074319f9519600 fd leak warning logs
+- aff2ad8d3c43ec638765f4e3630a6faf23b0180a `SIGPIPE` handling in ReZygiskd
+- a75b2fe2b8439e16dc0980e63a52c99d94723bcf KernelSU Next recognition support
+- e036b1f40af428f21a13a685ad7d5d888a17f16e KernelSU Next spoofed manager recognition support
+- a0a54f2153f065fe0e1cd6767a6941be1b614462 Japanese WebUI translation
 
 ### Improved
 
@@ -67,3 +110,12 @@
 - 0671f2e497140e40071f67e67481541def4258bb Hiding by resetting linker module (un)load counter
 - 886e2f8396979781d82983f9536b76f75373d909 d0b044a31d9b4cd711ad1805c050e09b589bccf8 Mounting system
 - db24c1c4396056ca659233e9422e1e536d13cc3c b24c74ac0d23be0176bd947baaa59c947482fbeb Not umount module `/system` mounts
+- f432550f07be99cd3011dcfe7d9f1ba4add47291 dynamically retrieve `libc.so` path
+- 313822ddcd4104ab3ebd3a37621bfbd9e44b9ef0 Elf utils code
+- 313822ddcd4104ab3ebd3a37621bfbd9e44b9ef0 `libzygisk.so` injection
+- 54584410ce2c066b1afafd1d66c55d9cd068c6b4 mount flexibility in pre app specialize.
+- 6272e0a2ac66da8e0f97e459fbae70a0933641e6 umount system code
+- 6272e0a2ac66da8e0f97e459fbae70a0933641e6 umount system
+- 34643c794fb02ec4c44a426ac0cf573f55704a0c SoInfo hiding compatibility
+- 823623a96f9a9e136184680a193637b763ce679c manager capability by setting `ZYGISK_ENABLED` for all managers
+- 9810eb3974286203b8c01ffc34b20a82a328c21d reset `ptrace_message` with seccomp
