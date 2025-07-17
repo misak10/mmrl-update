@@ -1,13 +1,15 @@
-- 同步上游代码
-- 增加 frida 兼容：如 frida server 与 ZN 不兼容，可创建 `/data/adb/zygisksu/frida_compat` 启用兼容功能，重启生效
-- 修复一些其他问题
+- 使用 ksu 提供的 api 判断管理器
+- 在纯 64 位设备上不解压 32 位运行库
+- 修复一些其它问题
+- 暂未集成 Shamiko，敬请期待 1.3.0 版本
 
 ---
 
-- Sync with upstream code
-- Add Frida compatibility: If Frida server is incompatible with ZN, you can create `/data/adb/zygisksu/frida_compat` to enable compatibility. Reboot to take effect.  
+- Use the API provided by KSU to determine the manager
+- Don't ship 32 bit lib on pure 64 bit devices
 - Fix some other issues
+- Shamiko is not integrated yet — please wait for version 1.3.0.
 
 ---
 
-SHA256: 3dca8d3ba96259677d9af69212ba53dc82198f7c6d87f6a3872ec521dbfb76dc
+SHA256: 3c91deee8b8359fc2b4d115939b4f993e0d34c38b41bf7cc2ae7db29d79d3638

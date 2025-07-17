@@ -1,3 +1,6 @@
+> [!WARNING]
+> This version use a different module ID from Release Candidate 2. Please remove the old version first before installing the newer ones. You WILL get a bootloop if you fail to follow this instruction. For more information, see #208.
+
 ### Removed (breaking changes)
 
 - a549f0e5ae1e0f4bb946021ad4035cf9b871292f Magisk Alpha support
