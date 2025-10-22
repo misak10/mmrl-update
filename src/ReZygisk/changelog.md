@@ -1,6 +1,3 @@
-> [!WARNING]
-> This version use a different module ID from Release Candidate 2. Please remove the old version first before installing the newer ones. You WILL get a bootloop if you fail to follow this instruction. For more information, see #208.
-
 ### Removed (breaking changes)
 
 - a549f0e5ae1e0f4bb946021ad4035cf9b871292f Magisk Alpha support
@@ -8,20 +5,24 @@
 ### Removed
 
 - 41e83aec52bdf38fbb09128f522e04e97b1dac09 0e9307bfd6fe44d055a022b99ef3e9fec17a7d20 Rust traces
-- 2814aaf67fc3993394e5b3801a4cf9a2606b63a8 Futile memory mapping renaming
+- 2814aaf67fc3993394e5b3801a4cf9a2606b63a8 futile memory mapping renaming
 - 886e2f8396979781d82983f9536b76f75373d909 all `core`  logs on `release` builds
 - 8f70a1a451aaefbb92aa869f96a86c357d22b892 `mazoku` file
 - 61ece7ee4fe6bdfdd120772026891a69e40f1bf8 ccache from workflows
 - 7993278a5f9daec3edf9e676a4b14c68b2e5a584 outdated README translations
+- 2dfa221287059b649e89bfd6776dd249f72c0e16 unnecessary `unshare` hook
+- 872ba693a1ccf8d3680d7516d3bb7e241ea9bcb4 futile maps hiding
+- 6b929078bf7dbd731246da9688b1aa1a8826652d unnecessary `purge_unused_memory`
+- 13ef3c441b86e537bc66e083b3e34e57269f60cb logs from left overs of debugging 
 
 ### Fixed
 
 - 5da73dd053a57f220db1017bafda74e9c6915f7e `module.prop` not being umounted properly
-- 88f1b7fdb976d2d6ff7a04b5cfd85287bfe2d44a Too permissive SELinux rules leading to Permission Loopholes
-- 5d0adacf4a0d62e88a5267ec2934c1aa3e819d38 Companions not starting properly
-- d498a9ab0177eb9087e7eef3978a22640f6cfaa5 Trigger module's `service.sh` in parallel
-- 3d79939d7bb30841c5f85013dfab9515fd1a4145 Not finding SoList related symbols with suffix
-- c37a5b1c8e0cfa00d3cec3875e42c0281c600462 Missing `status32` exit check
+- 88f1b7fdb976d2d6ff7a04b5cfd85287bfe2d44a too permissive SELinux rules leading to Permission Loopholes
+- 5d0adacf4a0d62e88a5267ec2934c1aa3e819d38 companions not starting properly
+- d498a9ab0177eb9087e7eef3978a22640f6cfaa5 Ttigger module's `service.sh` in parallel
+- 3d79939d7bb30841c5f85013dfab9515fd1a4145 not finding SoList related symbols with suffix
+- c37a5b1c8e0cfa00d3cec3875e42c0281c600462 missing `status32` exit check
 - 0930c8cca4e48859706488e157a8796a7d7467d3 Magisk ReZygiskd code not checking against umount list with process name
 - d6961603fae72e0f069c408772435c801f1db62d sanitization of fds in Zygote
 - 0d60dc0ec04ef3629f4b6e4bf5ac4c60c021859b sending data to closed fd
@@ -34,7 +35,7 @@
 - c023da0fd6a2b5e5d0b50c440dc7e0e03f723f5b `Code of Conduct` URL in templates
 - ec705fb26093702ff6af7bb63bde9edc7ebd79ef removal all of PLT hooks unconditionally
 - 57f985292efbb750c3477f4f3a590766a1f0f322 dir fd leak in ReZygiskd
-- 4f35e06ac4aad582d13d9343e15e08293063c729 gradle building system warnings
+- 4f35e06ac4aad582d13d9343e15e08293063c729 `gradle` building system warnings
 - c786790b0f031dede3cc432763562f71eeea97eb Trusted CI workflow in forks
 - cd4784376edeeedd663ecca88af19108271af834 out-of-bounds write in WSA in ReZygiskd
 - d111a2dfc52b1aa74d3bf6f1c6120598c855acb6 perfetto related `zygote64` crashes
@@ -46,13 +47,28 @@
 - fa9adcf3b5efb0f11a1ff185a59494fdd3b12025 `FORCE_DENYLIST_UNMOUNT` behavior
 - 9a3b2f4a799b80d14719ed7804b6e8f91c8d40eb KernelSU variant detection
 - b6f02b39b3410ee744432c00f15c75125dc9dca8 KernelSU Next manager runtime switch recognition
+- 90da42a10b6ec3f0e7fdbb2db2dba2d20a0d29be passing invalid address to KernelSU in `reply_ok`
+- d54cac89a7a40669f998af2d19798bc6a1c871df missing `#include` in `misc.h`
+- 38cfbb25efa6707d419f85140273d1a76f305a59 `Permission Denied` in `setns` on `3.19`- systems
+- 510e8a2de4ebba222c4ebf619b0152c41d239650 not extracting 32-bit binaries in systems using Tango
+- bf3c73d72b99f2e9fc3ee7270adcb6fc00dd00a2 not extracting binaries in some devices
+- e0ce1473dda33bd0639a529ce8f9f7b614810e20 Zygote crash when umounting preloaded files
+- 08513b17e83de87dc97ca18b1a44ca9fa4cd76f4 many memory related bugs (memory leak, fp leak, unitialized access)
+- f9fcf1c2e7c8082d166a86de6ffaf68006243a0f remote `strlen` when injecting `libzygisk.so`
+- 70805bb3902d3715ff234a9486a0fc36dac57859 misinterpreted `status.json` for Zygote in the WebUI
+- 3688df645010abc1af09ea569fe118494bc83584 inconsistency in `pre/post app specialize` for manager process
+- f6b40743257f195b9c99179dae2194a9b4d06891`magisk_uid_should_umount` SQL query
+- 83806a57e968b8177ad6c194e8f736ede8cac298 `Issue` template `yaml`
+- 6b929078bf7dbd731246da9688b1aa1a8826652d path cleanup `memset` call
+- 046a659e02ae68bd16ee39c521209831dcdff137 root mount leak in isolated services with Magisk
+- 6bd436ad33eaf4f0f348120f2e2f42b2d2fd8edc preload on some systems
 
 ### Updated
 
 - 2017140e0e708717a46b34e37f88e85cc8d07832 Zygisk API to v4
-- df0f2ce5a22eeca44cadd67ac12196bea02310dd c9c15bf120b5f8f207bf881e50ddea59a71c8e47 LSplt
-- 47f230d0c2f8c9ef9cb42e8b5447f580e123c053 19952e6d0376abb1bffc1f070e115f99b6bad076 954c3a9cc50670ccf23efe0639d90571a5dcb452 Workflows
-- 37a667ce2a53c87992f10b93a79180e13188ad2b b1e217b665aa033dfa8f8579eaaa50d2352d0377 6ca4b7276271712ceaa1bf607525524753652785 980bf2ab4c2793bca8e37859bc25bc627070b3de 9aafc279d5f7a492acff3f0de1ddbc2ecc8d8d9c Compilation commands
+- df0f2ce5a22eeca44cadd67ac12196bea02310dd c9c15bf120b5f8f207bf881e50ddea59a71c8e47 a7917e20feb9e475df04f1482f853a97635afed6 0c7a7560306706b25b9e11c3ff3fc3026325a234 LSPlt
+- 47f230d0c2f8c9ef9cb42e8b5447f580e123c053 19952e6d0376abb1bffc1f070e115f99b6bad076 954c3a9cc50670ccf23efe0639d90571a5dcb452 workflows
+- 37a667ce2a53c87992f10b93a79180e13188ad2b b1e217b665aa033dfa8f8579eaaa50d2352d0377 6ca4b7276271712ceaa1bf607525524753652785 980bf2ab4c2793bca8e37859bc25bc627070b3de 9aafc279d5f7a492acff3f0de1ddbc2ecc8d8d9c compilation commands
 - 7993278a5f9daec3edf9e676a4b14c68b2e5a584 README translations to match `README.md`
 - 98f88916b80f95aa2cc3bc808c255618f0d432cf module ID
 - 2f589d0edabadf5ddbf0170b7d1a2ff465636a13 LSPlt source
@@ -60,16 +76,19 @@
 - 63f29f07712b47511794ffe5a8c39d955f6f1bd8 `setup-gradle` action
 - 295a62b649ad331e207c0d177ab79d1879aef92d `tr_TR` translation credits
 - bc1b757bb8ed8e3d85b4b00e15315dda11005eef `CMD_HOOK_MODE` and `CMD_GET_MANAGER_UID` values
+- 153097f9d8dd08741bb6dc9a74b265564a91782b Rewrote ART hook and module related code to C
+- 57cb028e8e0f39d5aedd8fdf03065d0e43a604e1 module status example in `README`s
+- 6bd436ad33eaf4f0f348120f2e2f42b2d2fd8edc rollback global `on load` call
 
 ### Added
 
-- af96b85a91ba3d1107884c61484f276cc1a4caff Maps hiding
+- af96b85a91ba3d1107884c61484f276cc1a4caff maps hiding
 - 7027e8147fcdb04bbd22c619bb9e616b71f85b34 47566a81afc32c7eadbf871c75f23f966cae84e5 7da7b8bd07638c4d03ffea2ec157e954ad36c000 Simplified Chinese README
 - 5d9276e9e0d0da2cf33af6900eddea91a1384c2f Traditional Chinese README
-- b5b5c2f9d8d88c08bf70dfba55a3127512c4b1d3 Japanese README
+- b5b5c2f9d8d88c08bf70dfba55a3127512c4b1d3 japanese README
 - 2047bdb1bf9c1a4d9462760a32a70462ec3228ba c2cb29b717cc46849f1bd718ffc5266b97358388 7399ae417d18cb0c9f44682e011992581c0056f9 f1fe6b4435f0f4fa627b6fec3f3b264e188d53fe c1e45e9af603dcd36df97323294a5358e0e17756 05ae6941ba0931c8c83ac9aebfaeb10e322897a0 b392730366b7a60e49396a7de2611acd25349f72 APatch support
 - 0987e401dabb04a53af2af688aa18339da3b83e4 7d83bb311aceb6e5f8d8c24c504da4758c3f75b7 Issues, FR templates
-- 3451057d1713022817cb133f102b6e2dd82b8473 Ignore modules for manager process
+- 3451057d1713022817cb133f102b6e2dd82b8473 ignore modules for manager process
 - 135ebbb9ba17009cca6e7084eb565c751d1fe80e Magisk variant detection
 - 135ebbb9ba17009cca6e7084eb565c751d1fe80e `ksud` file check for KSU
 - 060a1f3cf96000bcccf0891217d0afcc9de79e2b 622e23e7ecf0c87b36c678c3c1babd73a4c955ab GrapheneOS support
@@ -81,7 +100,7 @@
 - bc6cf67c7be00461a70e6a4683eac81aff72a17b Turkish README
 - 92e2f528a905e27dfa321e4131f6125355fa8edb 2d80ce6935562637e156a42ea0636d9f2c5320f8 bd5eb4c7958557ea841b855409ec6ede9e43a2c0 Android 9 support
 - 221b4fc9973f4744efcef5766581ad36cb810b15 French README
-- https://github.com/PerformanC/ReZygisk/commit/96123aa53ce8c462c3fe7f18046a0a4c9bcae6b2 support to 32-bit only environments
+- 96123aa53ce8c462c3fe7f18046a0a4c9bcae6b2 support to 32-bit only environments
 - 68f1b1fb35ba732fddda85c37f1995d48a01979f `machikado` per architecture
 - bdcb67b1f9699d2d547a6b0bdb1e62d42640ca37 Japanese README
 - 4de1b443cf98d63b2acd5b24b612a3c5ceedcd6a WebUI
@@ -92,6 +111,9 @@
 - a75b2fe2b8439e16dc0980e63a52c99d94723bcf KernelSU Next recognition support
 - e036b1f40af428f21a13a685ad7d5d888a17f16e KernelSU Next spoofed manager recognition support
 - a0a54f2153f065fe0e1cd6767a6941be1b614462 Japanese WebUI translation
+- f9fcf1c2e7c8082d166a86de6ffaf68006243a0f handling for GNU ifunc
+- e6344d2e12108cf0aab84c83ae646808f173f409 `r_debug_tail` trace hiding
+- cc2c0699b00b026a1ce815c6cc6375ddee3ea958 `updateJson` to `module.prop`
 
 ### Improved
 
@@ -104,7 +126,7 @@
 - 4b7178f1ea4178d89d203c64e3f1d2e516e39234 Make partition names generic 
 - 75a004f9d5e6e084a9ac62a0b518d6221fbcbf8b f35680837ed10653ab85ef6edef922e1353e00aa CLI 
 - 6cc01fb548e7deddacf598ae7af9fb89f3c6baa0 `zygisk-ptrace`'s ReZygiskd events code
-- 380ef011a1b9532936559c1c16c5600dabad7157 Module description status
+- 380ef011a1b9532936559c1c16c5600dabad7157 d2ebb2bfedb3c401798853c528c47c31ce76ee62 Module description status
 - 2c74ee3877ad461a1f51d163fa097ec19bdf87ac `module.prop` parsing code
 - 9bcbec91aa60f2faa7ff6b4e96f87ad4b5f1405d Export CMake compile commands
 - 6c41a8188d1911d76793c07b390d30693f7a14d7 6cb8f305bc10adb84253355c66a13884fa552314 Hiding by dropping SoInfo info about loaded modules
@@ -114,11 +136,19 @@
 - 886e2f8396979781d82983f9536b76f75373d909 d0b044a31d9b4cd711ad1805c050e09b589bccf8 Mounting system
 - db24c1c4396056ca659233e9422e1e536d13cc3c b24c74ac0d23be0176bd947baaa59c947482fbeb Not umount module `/system` mounts
 - f432550f07be99cd3011dcfe7d9f1ba4add47291 dynamically retrieve `libc.so` path
-- 313822ddcd4104ab3ebd3a37621bfbd9e44b9ef0 Elf utils code
+- 313822ddcd4104ab3ebd3a37621bfbd9e44b9ef0 ELF utils code
 - 313822ddcd4104ab3ebd3a37621bfbd9e44b9ef0 `libzygisk.so` injection
 - 54584410ce2c066b1afafd1d66c55d9cd068c6b4 mount flexibility in pre app specialize.
-- 6272e0a2ac66da8e0f97e459fbae70a0933641e6 umount system code
-- 6272e0a2ac66da8e0f97e459fbae70a0933641e6 umount system
+- 6272e0a2ac66da8e0f97e459fbae70a0933641e6 `umount` system code
+- 6272e0a2ac66da8e0f97e459fbae70a0933641e6 `umount` system
 - 34643c794fb02ec4c44a426ac0cf573f55704a0c SoInfo hiding compatibility
 - 823623a96f9a9e136184680a193637b763ce679c manager capability by setting `ZYGISK_ENABLED` for all managers
 - 9810eb3974286203b8c01ffc34b20a82a328c21d reset `ptrace_message` with seccomp
+- 7e823319b7d3eb594224a85c112b87f1d2e7e70e SoList hiding code complexity
+- 3688df645010abc1af09ea569fe118494bc83584 Allow to inject into manager process
+- 0f27e455e7aa27cf5152bfa4ff54c6dbe73f7031 Preload modules globally
+- 0dedf9c98fb2ab533048f7aaf3c18b4af7188faa `Issue` template
+- 4cc94decaf65222cecdae4cf12ed307e152a8d21 availability in old kernels
+- 67d7efa985963c98f4072fd6e0ceb791853772fb SoList hiding when a module is not `dlclose`d
+- 05193e7024b9a4cea10869bdfd612af49e08b7ee Simplify initial hook code
+- ecb2981aa72a207a44f3cd4d0deaeeb53984f953 Simplify abort-bypass code when umounting preloaded files
