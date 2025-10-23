@@ -20,7 +20,7 @@
 - 5da73dd053a57f220db1017bafda74e9c6915f7e `module.prop` not being umounted properly
 - 88f1b7fdb976d2d6ff7a04b5cfd85287bfe2d44a too permissive SELinux rules leading to Permission Loopholes
 - 5d0adacf4a0d62e88a5267ec2934c1aa3e819d38 companions not starting properly
-- d498a9ab0177eb9087e7eef3978a22640f6cfaa5 Ttigger module's `service.sh` in parallel
+- d498a9ab0177eb9087e7eef3978a22640f6cfaa5 Trigger module's `service.sh` in parallel
 - 3d79939d7bb30841c5f85013dfab9515fd1a4145 not finding SoList related symbols with suffix
 - c37a5b1c8e0cfa00d3cec3875e42c0281c600462 missing `status32` exit check
 - 0930c8cca4e48859706488e157a8796a7d7467d3 Magisk ReZygiskd code not checking against umount list with process name
@@ -33,7 +33,7 @@
 - 6261466e44c0511f4336d2459e8256f938be1e96 Zygisk module loading
 - 70697be9a5230b3e254a9df68b8cba599dbbab90 kernelland bug for `ptrace_message` leak
 - c023da0fd6a2b5e5d0b50c440dc7e0e03f723f5b `Code of Conduct` URL in templates
-- ec705fb26093702ff6af7bb63bde9edc7ebd79ef removal all of PLT hooks unconditionally
+- ec705fb26093702ff6af7bb63bde9edc7ebd79ef removal of all PLT hooks unconditionally
 - 57f985292efbb750c3477f4f3a590766a1f0f322 dir fd leak in ReZygiskd
 - 4f35e06ac4aad582d13d9343e15e08293063c729 `gradle` building system warnings
 - c786790b0f031dede3cc432763562f71eeea97eb Trusted CI workflow in forks
