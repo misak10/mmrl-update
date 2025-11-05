@@ -1,6 +1,6 @@
 {
-  "version": "v1.2.9.1",
-  "versionCode": 1291,
-  "zipUrl": "https://github.com/Dr-TSNG/ZygiskNext/releases/download/v1.2.9.1/Zygisk-Next-1.2.9.1-534-b8e7e21-release.zip",
+  "version": "v1.3.0",
+  "versionCode": 130,
+  "zipUrl": "https://github.com/Dr-TSNG/ZygiskNext/releases/download/v1.3.0/Zygisk-Next-1.3.0-648-4d40f10-release.zip",
   "changelog": "https://raw.githubusercontent.com/misak10/mmrl-update/main/src/ZygiskNext/changelog.md"
 }
