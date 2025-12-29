@@ -1,17 +1,19 @@
-- 支持无 SELinux 环境（如 redroid）
-- 修复 ZN linker 对 libunwind 和 C++ 异常的支持
-- 修复 ZN module 定义多个作用域无效的问题
-- webui 增加更多翻译
-- 修复若干问题
+- webui: 支持官方 KSU insets
+- webui: 增加内核卸载冲突提示
+- webui: 更新翻译
+- core: 支持 Android 16 QPR2
+- core: 更新 KernelSU 支持
+- core: 兼容更多虚拟机环境
 
 ---
 
-- Supports SELinux-free environments (such as Redroid)
-- Fix ZN linker support for libunwind and C++ exceptions
-- Fix ZN module multiple scopes definition has no effect
-- Add more translation to the web UI
-- Fix several other issues
+- webui: Support official KSU insets
+- webui: Add alert info for kernel umount conflict
+- webui: Update translations
+- core: Support Android 16 QPR2
+- core: Update KernelSU support
+- core: Support more virtual machine environments
 
 ---
 
-SHA256: 7ab5f6bb06c60c960f62fdbf2312e56b094ee91e44105a734a57c763c274b5c3
+SHA256: 6eedf9401eeb0778febee48f08af8ea517208ceb31f644715e24ca2a57b59425
