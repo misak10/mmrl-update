@@ -16,4 +16,5 @@
 更新教程: https://gitee.com/eritpchy/FingerprintPay#%E4%BD%BF%E7%94%A8%E6%AD%A5%E9%AA%A4-magisk
 
 镜像地址:  
-https://pan.quark.cn/s/dae9bc84d64f 
+https://pan.quark.cn/s/dae9bc84d64f
+https://file.xdow.net/fingerprintpay
