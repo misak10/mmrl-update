@@ -62,6 +62,18 @@
 - 6b929078bf7dbd731246da9688b1aa1a8826652d path cleanup `memset` call
 - 046a659e02ae68bd16ee39c521209831dcdff137 root mount leak in isolated services with Magisk
 - 6bd436ad33eaf4f0f348120f2e2f42b2d2fd8edc preload on some systems
+- 5b28906f927604633cbfc94088f2cf0069e47a79 munmapping the wrong region
+- 5a50a8b126e1cfed0c3bb66d702536feb1ba2413 use of deprecated `-Ofast` compiling flag
+- ecc28ed343c2c8cfecaee997b4007176c51d968e not finding PDG (Page Data Guard) symbols in some ROMs
+- 5ae9f5ba556cb0e5dae4eda3b0748557842c8c9f `Unknown` tracing state in WebUI
+- b5bd3bf9ebf47813a0886f541265661a9c37e0e5 supported ABIs recognition with Tango
+- 766db554eec31f5dc6d09d49977f38ec57a5f5c8 wrong `response` size check
+- a9c744d8b6e80674835dbe42488417b339d79ccb WebUI syntax error due to `localStorage` implementation
+- 1767ae2e8f12360a3c9ddaa352ddabb7de2341f4 7102fcd3ac1d2fa78bb3d3a76f2ffb56292a2254 failing to inject `libzygisk.so`
+- 64dbaa23f0a90161aac753dda33a72f549aacda3 stack frame corruption
+- 26570a497456e71625f2295b57440141b6b0bc26 KSU `ioctl` recognition
+- 5679ae8992ffab29001b3dd67d1bad2c01373f3b not all `libzygisk.so` mappings being file-backed
+- 86f01a978947f95ae1a7d5d10f13c837412c7176 not closing `socket_fd` in error paths
 
 ### Updated
 
@@ -71,7 +83,7 @@
 - 37a667ce2a53c87992f10b93a79180e13188ad2b b1e217b665aa033dfa8f8579eaaa50d2352d0377 6ca4b7276271712ceaa1bf607525524753652785 980bf2ab4c2793bca8e37859bc25bc627070b3de 9aafc279d5f7a492acff3f0de1ddbc2ecc8d8d9c compilation commands
 - 7993278a5f9daec3edf9e676a4b14c68b2e5a584 README translations to match `README.md`
 - 98f88916b80f95aa2cc3bc808c255618f0d432cf module ID
-- 2f589d0edabadf5ddbf0170b7d1a2ff465636a13 LSPlt source
+- 2f589d0edabadf5ddbf0170b7d1a2ff465636a13 58ace5c121b994a6f9ea1a5538536b1dc3b95122 ccfa342e3e4287c853a6fa1556eab0e3be35baaa LSPlt source
 - c975722795473941abe4888528b158e348ca28b0 PLT hooks unload code
 - 63f29f07712b47511794ffe5a8c39d955f6f1bd8 `setup-gradle` action
 - 295a62b649ad331e207c0d177ab79d1879aef92d `tr_TR` translation credits
@@ -79,6 +91,9 @@
 - 153097f9d8dd08741bb6dc9a74b265564a91782b Rewrote ART hook and module related code to C
 - 57cb028e8e0f39d5aedd8fdf03065d0e43a604e1 module status example in `README`s
 - 6bd436ad33eaf4f0f348120f2e2f42b2d2fd8edc rollback global `on load` call
+- b0f3527f268a7f88b5fd77ad4045e5a3fafe233d Vietnamese README
+- 76bbabb7734bdc567200877d638fe58ce263a46b CSOLoader source
+- 18f484bec214b5468a2d00d8e3ec5a60eb04db06 licensing information in `README.md`
 
 ### Added
 
@@ -114,6 +129,16 @@
 - f9fcf1c2e7c8082d166a86de6ffaf68006243a0f handling for GNU ifunc
 - e6344d2e12108cf0aab84c83ae646808f173f409 `r_debug_tail` trace hiding
 - cc2c0699b00b026a1ce815c6cc6375ddee3ea958 `updateJson` to `module.prop`
+- fbc0faecc13c912e715bd1dfd561bae0c131a438 KSU v3 support
+- 57680a7fae687d143de6055662f2070157248fa5 Arabic README
+- 766db554eec31f5dc6d09d49977f38ec57a5f5c8 logs for `dlopen` fail scenario
+- 3d9052165b4e07aaab048148a6d678dd58f9c9a4 support for devices with unhookable `ReopenOrDetach`
+- 4bd85aef9820697f04b70c507e4808c424942c04 CSOLoader usage
+- 09374ee0ddde9f1dcc9c65d2df430289c1202717 Chinese README
+- 32e1d2e11b9e086c3030e0a43f2c58354646a642 OneUI 8.5 support
+- 90ab67b790cf72231a80c64dd7c5d022e58762ed `localStorage` namespace for WebUI
+- be955c0cc58cd40515d99a0ab240777c7791ff49 Tango-based Zygote support
+- 44b6d9088a2ebd263d2730a1e59c6e92168f42ee `unhook_functions` error handling
 
 ### Improved
 
@@ -152,3 +177,17 @@
 - 67d7efa985963c98f4072fd6e0ceb791853772fb SoList hiding when a module is not `dlclose`d
 - 05193e7024b9a4cea10869bdfd612af49e08b7ee Simplify initial hook code
 - ecb2981aa72a207a44f3cd4d0deaeeb53984f953 Simplify abort-bypass code when umounting preloaded files
+- f27ebf0b215ac125a34e5470c7808834d68634cd disable kernel umount when supported in KSU
+- 58ace5c121b994a6f9ea1a5538536b1dc3b95122 `ReopenOrDetach` symbol lookup
+- 5ae9f5ba556cb0e5dae4eda3b0748557842c8c9f WebUI icons
+- b5bd3bf9ebf47813a0886f541265661a9c37e0e5 ReZygiskd arch recognition
+- d61e37711e9bb128cf523b71e308421df1d02364 overall ReZygiskd code
+- 3c9e94af73ca3c68297f28e83bf44aa062e8ad5f overall `libzygisk.so` code
+- b0f3527f268a7f88b5fd77ad4045e5a3fafe233d Vietnamese README
+- 76bbabb7734bdc567200877d638fe58ce263a46b organization for all READMEs
+- c59924c18eeae3dcaf18717687bbc66968f81a28 hiding when a Zygisk module isn't unloaded
+- 1c076419e6d4e0a953752be72bc183f815fa96cf use of RCSOLoader for `libzygisk.so` injection
+- fb23d643c698c3ae45bfd84a893e11d20604a8c3 rewritten the rest of the src to C
+- 9ab78ec495f6576811d9acbf989f6ea8c5b055b0 reduced installation size
+- b5f0aa5321ddf68e235038eab871dc4332710043 Issue template
+- 86f01a978947f95ae1a7d5d10f13c837412c7176 use `lsetxattr(...)` instead of `system(...)`
