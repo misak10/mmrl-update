@@ -1,19 +1,17 @@
-- webui: 支持官方 KSU insets
-- webui: 增加内核卸载冲突提示
-- webui: 更新翻译
-- core: 支持 Android 16 QPR2
-- core: 更新 KernelSU 支持
-- core: 兼容更多虚拟机环境
+- 默认启用 ZN linker
+- 适配 Android Canary 2603 的相关改动
+- 提升对 nubia 系统、三星系统的兼容性
+- 修复某些情况下与 magisk 的兼容性问题
+- 修复其他小问题
 
 ---
 
-- webui: Support official KSU insets
-- webui: Add alert info for kernel umount conflict
-- webui: Update translations
-- core: Support Android 16 QPR2
-- core: Update KernelSU support
-- core: Support more virtual machine environments
+- Enable ZN linker by default
+- Adapt to changes in Android Canary 2603
+- Improve compatibility with certain nubia and Samsung systems
+- Fix compatibility issues with Magisk in some cases
+- Fix other minor issues
 
 ---
 
-SHA256: 6eedf9401eeb0778febee48f08af8ea517208ceb31f644715e24ca2a57b59425
+SHA256: a528584874dd814423dece1a6bc734aee524886d74f4453f48af0715a7f0f5c4
