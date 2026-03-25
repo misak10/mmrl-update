@@ -13,7 +13,7 @@
 - 2dfa221287059b649e89bfd6776dd249f72c0e16 unnecessary `unshare` hook
 - 872ba693a1ccf8d3680d7516d3bb7e241ea9bcb4 futile maps hiding
 - 6b929078bf7dbd731246da9688b1aa1a8826652d unnecessary `purge_unused_memory`
-- 13ef3c441b86e537bc66e083b3e34e57269f60cb logs from left overs of debugging 
+- 13ef3c441b86e537bc66e083b3e34e57269f60cb dc2861918c87cce596a29b814a9138e12c23bcb0 logs from left overs of debugging 
 
 ### Fixed
 
@@ -74,6 +74,8 @@
 - 26570a497456e71625f2295b57440141b6b0bc26 KSU `ioctl` recognition
 - 5679ae8992ffab29001b3dd67d1bad2c01373f3b not all `libzygisk.so` mappings being file-backed
 - 86f01a978947f95ae1a7d5d10f13c837412c7176 not closing `socket_fd` in error paths
+- c9127245b07f7c81f9444df4d2591a9e2770ec73 ReZygisk not recognizing KSU manager in Private Space
+- 9f640ac9a7ba61436e850db21128aea2afc930ec improper JSON formation for `state.json`
 
 ### Updated
 
@@ -92,7 +94,7 @@
 - 57cb028e8e0f39d5aedd8fdf03065d0e43a604e1 module status example in `README`s
 - 6bd436ad33eaf4f0f348120f2e2f42b2d2fd8edc rollback global `on load` call
 - b0f3527f268a7f88b5fd77ad4045e5a3fafe233d Vietnamese README
-- 76bbabb7734bdc567200877d638fe58ce263a46b CSOLoader source
+- 76bbabb7734bdc567200877d638fe58ce263a46b 2fd00e53523f80d8c64e2ee9c813dfc7a27a5903 c13b8916d3ab1d16a4623837df658429ad354c7d CSOLoader source
 - 18f484bec214b5468a2d00d8e3ec5a60eb04db06 licensing information in `README.md`
 
 ### Added
@@ -139,6 +141,8 @@
 - 90ab67b790cf72231a80c64dd7c5d022e58762ed `localStorage` namespace for WebUI
 - be955c0cc58cd40515d99a0ab240777c7791ff49 Tango-based Zygote support
 - 44b6d9088a2ebd263d2730a1e59c6e92168f42ee `unhook_functions` error handling
+- 14a429d4ece5d3b2b3a6594a93c5a57322815066 module `id` assertion
+- 7c5a0d8de68a8fe3859b2df8cb855fc37186bdbc CLA Assistant workflow
 
 ### Improved
 
@@ -191,3 +195,6 @@
 - 9ab78ec495f6576811d9acbf989f6ea8c5b055b0 reduced installation size
 - b5f0aa5321ddf68e235038eab871dc4332710043 Issue template
 - 86f01a978947f95ae1a7d5d10f13c837412c7176 use `lsetxattr(...)` instead of `system(...)`
+- dc2861918c87cce596a29b814a9138e12c23bcb0 only use `--restart` flag when retrying to inject into Zygote
+- 02b30ef21b97435ad96166cf9dbeb84d53fce6cd module `id` assertion
+- e2874ea82b4335a8b82ed4e7ef290c442742f880 `SIGSYS` in Waydroid for KSU v3 check
