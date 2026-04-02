@@ -76,12 +76,14 @@
 - 86f01a978947f95ae1a7d5d10f13c837412c7176 not closing `socket_fd` in error paths
 - c9127245b07f7c81f9444df4d2591a9e2770ec73 ReZygisk not recognizing KSU manager in Private Space
 - 9f640ac9a7ba61436e850db21128aea2afc930ec improper JSON formation for `state.json`
+- ff13ff3d9664c9c77fcb36b971cb62856364d17d mismatch between ReZygiskd and ReZygisk core module list
+- 97dbff43c5b8797053d39ce1e9354d795f0c9890 path string leak in stack
 
 ### Updated
 
 - 2017140e0e708717a46b34e37f88e85cc8d07832 Zygisk API to v4
 - df0f2ce5a22eeca44cadd67ac12196bea02310dd c9c15bf120b5f8f207bf881e50ddea59a71c8e47 a7917e20feb9e475df04f1482f853a97635afed6 0c7a7560306706b25b9e11c3ff3fc3026325a234 LSPlt
-- 47f230d0c2f8c9ef9cb42e8b5447f580e123c053 19952e6d0376abb1bffc1f070e115f99b6bad076 954c3a9cc50670ccf23efe0639d90571a5dcb452 workflows
+- 47f230d0c2f8c9ef9cb42e8b5447f580e123c053 19952e6d0376abb1bffc1f070e115f99b6bad076 954c3a9cc50670ccf23efe0639d90571a5dcb452 afe357cf6ae905857515d87eb27dcc25a31a6794 workflows
 - 37a667ce2a53c87992f10b93a79180e13188ad2b b1e217b665aa033dfa8f8579eaaa50d2352d0377 6ca4b7276271712ceaa1bf607525524753652785 980bf2ab4c2793bca8e37859bc25bc627070b3de 9aafc279d5f7a492acff3f0de1ddbc2ecc8d8d9c compilation commands
 - 7993278a5f9daec3edf9e676a4b14c68b2e5a584 README translations to match `README.md`
 - 98f88916b80f95aa2cc3bc808c255618f0d432cf module ID
@@ -143,6 +145,9 @@
 - 44b6d9088a2ebd263d2730a1e59c6e92168f42ee `unhook_functions` error handling
 - 14a429d4ece5d3b2b3a6594a93c5a57322815066 module `id` assertion
 - 7c5a0d8de68a8fe3859b2df8cb855fc37186bdbc CLA Assistant workflow
+- cc3e8531e5eb399877f0186b277456c38bd379d5 Russian README
+- da045a8a034a8c041dbc5a2c6d63636d4ce67191 `ksu` SELinux rules
+- e1117251cf305aa496eee8f8de8cc63d35a82d9d Android 17 Beta 3 compatibility
 
 ### Improved
 
@@ -198,3 +203,7 @@
 - dc2861918c87cce596a29b814a9138e12c23bcb0 only use `--restart` flag when retrying to inject into Zygote
 - 02b30ef21b97435ad96166cf9dbeb84d53fce6cd module `id` assertion
 - e2874ea82b4335a8b82ed4e7ef290c442742f880 `SIGSYS` in Waydroid for KSU v3 check
+- 7e85354249f14d8eda8f089ca0a974fc3947c549 warning for module's app/server specialize callback is NULL
+- 94effe3529ff708e02ed67c2a764fb3aa0a975d8 overall code quality
+- 4dc101488169f141993d318bb7acb38f5d1eddcd detect `ksud` existence in KernelSU ioctl path
+- 4dc101488169f141993d318bb7acb38f5d1eddcd detect original `ksud` path instead
