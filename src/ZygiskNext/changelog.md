@@ -1,17 +1,15 @@
-- 默认启用 ZN linker
-- 适配 Android Canary 2603 的相关改动
-- 提升对 nubia 系统、三星系统的兼容性
-- 修复某些情况下与 magisk 的兼容性问题
-- 修复其他小问题
+- 修复使用某些模块导致崩溃的问题
+- WebUI 增加 ZN 模块列表
+- 增加 Zygisk 模块错误检查机制，发现存在问题的模块会显示在 ZN 的模块状态和 WebUI 中（可检查的错误请参见[文档](https://github.com/Dr-TSNG/ZygiskNext/wiki/Module-issues)）
+- 补充 1.3.3 的更新：ZN 模块的 inline hook 功能无需额外在 sepolicy 增加 execmem 规则
 
 ---
 
-- Enable ZN linker by default
-- Adapt to changes in Android Canary 2603
-- Improve compatibility with certain nubia and Samsung systems
-- Fix compatibility issues with Magisk in some cases
-- Fix other minor issues
+- Fixed an issue that caused crashes when using certain modules.
+- Add ZN module list to the WebUI.
+- Add Zygisk module error checking mechanism. Modules with issues will be displayed in ZN's module status and WebUI (see [the documentation](https://github.com/Dr-TSNG/ZygiskNext/wiki/Module-issues) for checkable errors).
+- Supplemented the 1.3.3 update: ZN module inline hook functionality no longer requires adding an execmem rule to sepolicy.
 
 ---
 
-SHA256: a528584874dd814423dece1a6bc734aee524886d74f4453f48af0715a7f0f5c4
+SHA256: b330b368e6133b83c069c0ff1bb1bf81091afec5a8d6532d39c14bd1b7e5d367
