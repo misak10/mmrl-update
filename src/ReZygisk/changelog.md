@@ -13,7 +13,8 @@
 - 2dfa221287059b649e89bfd6776dd249f72c0e16 unnecessary `unshare` hook
 - 872ba693a1ccf8d3680d7516d3bb7e241ea9bcb4 futile maps hiding
 - 6b929078bf7dbd731246da9688b1aa1a8826652d unnecessary `purge_unused_memory`
-- 13ef3c441b86e537bc66e083b3e34e57269f60cb dc2861918c87cce596a29b814a9138e12c23bcb0 logs from left overs of debugging 
+- 13ef3c441b86e537bc66e083b3e34e57269f60cb dc2861918c87cce596a29b814a9138e12c23bcb0 logs from left overs of debugging
+- b477393bd6a2dbe1daf46d99973842b38276bc7c unnecessary `\n` in ReZygiskd
 
 ### Fixed
 
@@ -78,6 +79,19 @@
 - 9f640ac9a7ba61436e850db21128aea2afc930ec improper JSON formation for `state.json`
 - ff13ff3d9664c9c77fcb36b971cb62856364d17d mismatch between ReZygiskd and ReZygisk core module list
 - 97dbff43c5b8797053d39ce1e9354d795f0c9890 path string leak in stack
+- 606ae5073c3346dde7984518ad432635975b022d syscall number register in x64 and x86
+- 29bc1618112f3add8325429e04f3e15462d2fe7b warning to disable built-in Zygisk
+- 1dec22e5c4e696964b97bfbdadb1e8b20d38f1b0 `uninstall.sh` not being executed
+- f5e69b9cfd2f6b5382b3151b422b06f384f69293 missing `rezygisk.sh` and `uninstall.sh` in `machikado` formation
+- 709cb9d0f78f38767e455246e68d7eec20b1342d error `svg` in WebUI
+- 709cb9d0f78f38767e455246e68d7eec20b1342d not functioning color to red in WebUI
+- d834427c893e916d86324187414cb63722608d52 NULL deference in `monitor_stop_reason`
+- e6661d6081adb0f4a934fc15bb0cc6ec0cfc2601 module status not being cleared on boot
+- 19c6c5d26f254021fe2e19cf305837294c7adb3a memory, fd, and logic bugs
+- 28245090b91cd4bc1a9f99ce5d24ccd14fc8b68f building system
+- 28245090b91cd4bc1a9f99ce5d24ccd14fc8b68f Tango and Android 7.1 compatibility
+- bd92fb6d989499ff5322aed5f4352b392eedb8ee general bugs
+- 91d452379fa67046207315ea9e42cb2354e5120f using `exit 0` in `customize.sh`
 
 ### Updated
 
@@ -87,7 +101,7 @@
 - 37a667ce2a53c87992f10b93a79180e13188ad2b b1e217b665aa033dfa8f8579eaaa50d2352d0377 6ca4b7276271712ceaa1bf607525524753652785 980bf2ab4c2793bca8e37859bc25bc627070b3de 9aafc279d5f7a492acff3f0de1ddbc2ecc8d8d9c compilation commands
 - 7993278a5f9daec3edf9e676a4b14c68b2e5a584 README translations to match `README.md`
 - 98f88916b80f95aa2cc3bc808c255618f0d432cf module ID
-- 2f589d0edabadf5ddbf0170b7d1a2ff465636a13 58ace5c121b994a6f9ea1a5538536b1dc3b95122 ccfa342e3e4287c853a6fa1556eab0e3be35baaa LSPlt source
+- 2f589d0edabadf5ddbf0170b7d1a2ff465636a13 58ace5c121b994a6f9ea1a5538536b1dc3b95122 ccfa342e3e4287c853a6fa1556eab0e3be35baaa 8960681d0edb0b75ecd974f85f9e168618d0201d ceac5b7e905a2f191691943e53e6485f565e5fec LSPlt source
 - c975722795473941abe4888528b158e348ca28b0 PLT hooks unload code
 - 63f29f07712b47511794ffe5a8c39d955f6f1bd8 `setup-gradle` action
 - 295a62b649ad331e207c0d177ab79d1879aef92d `tr_TR` translation credits
@@ -96,8 +110,9 @@
 - 57cb028e8e0f39d5aedd8fdf03065d0e43a604e1 module status example in `README`s
 - 6bd436ad33eaf4f0f348120f2e2f42b2d2fd8edc rollback global `on load` call
 - b0f3527f268a7f88b5fd77ad4045e5a3fafe233d Vietnamese README
-- 76bbabb7734bdc567200877d638fe58ce263a46b 2fd00e53523f80d8c64e2ee9c813dfc7a27a5903 c13b8916d3ab1d16a4623837df658429ad354c7d CSOLoader source
+- 76bbabb7734bdc567200877d638fe58ce263a46b 2fd00e53523f80d8c64e2ee9c813dfc7a27a5903 c13b8916d3ab1d16a4623837df658429ad354c7d 18a6d65352d6cd188ed87d9c0bd8daa1fd59f225 e4190cd8eb3f69d5e31cd2a47d9dd1471726c83e CSOLoader source
 - 18f484bec214b5468a2d00d8e3ec5a60eb04db06 licensing information in `README.md`
+- 7586ec7080bc14aa82ce8b97fcfe36ffb6e9f009 7586ec7080bc14aa82ce8b97fcfe36ffb6e9f009 Contributor Assistant workflow
 
 ### Added
 
@@ -148,6 +163,9 @@
 - cc3e8531e5eb399877f0186b277456c38bd379d5 Russian README
 - da045a8a034a8c041dbc5a2c6d63636d4ce67191 `ksu` SELinux rules
 - e1117251cf305aa496eee8f8de8cc63d35a82d9d Android 17 Beta 3 compatibility
+- 9a46ba232aa156ce80503e5c2274940f52564c07 warning of other Zygisks running
+- 16915e9e3c3d802fbedf2479297de8c472f7b1dd Android 7.1 support
+- 17ed00a47e8839088a527fe6c12538b40d23ba7b Termux building support
 
 ### Improved
 
@@ -207,3 +225,14 @@
 - 94effe3529ff708e02ed67c2a764fb3aa0a975d8 overall code quality
 - 4dc101488169f141993d318bb7acb38f5d1eddcd detect `ksud` existence in KernelSU ioctl path
 - 4dc101488169f141993d318bb7acb38f5d1eddcd detect original `ksud` path instead
+- f951c2713c4c6e2ffbc186c012b29827670e29fa simplify `tango_translator` if logic
+- 5046b59988788ebee1eadf475b38c19525624407 simplify `module.prop` umount
+- 5046b59988788ebee1eadf475b38c19525624407 reworded `daemon` to `ReZygiskd` in the logs
+- 28021b1716174c664e3d48e98a337a89673bb795 make `module.prop` mountless
+- 172c51ab0138975e5a90fb0b1602f4ed07a30c42 cleanup headers and code
+- b6a02f61a19442e6c023577f8aff493a24b4056a high address as hint
+- bd92fb6d989499ff5322aed5f4352b392eedb8ee shell scripts security
+- a2b2285c667d37620e9f7b576a1ee297546f3c4e use GNU Make as building system
+- 36e57ca20154f61c2e1c8c22d36df2163fc32038 unify Tango injection with normal path
+- 4c9e967a2c760026f282dc1ee56e20d4e6f93b5a `module.prop` restoration robustness
+- 7e3db008cf70493490129649593a9be131f7509e action build time
