@@ -1,6 +1,7 @@
 ### Removed (breaking changes)
 
 - a549f0e5ae1e0f4bb946021ad4035cf9b871292f Magisk Alpha support
+- 333d423cde1a959958d9fce380bd017cf6c1cf64 Magisk Kitsune support
 
 ### Removed
 
@@ -118,6 +119,7 @@
 - 18f484bec214b5468a2d00d8e3ec5a60eb04db06 licensing information in `README.md`
 - 7586ec7080bc14aa82ce8b97fcfe36ffb6e9f009 7586ec7080bc14aa82ce8b97fcfe36ffb6e9f009 Contributor Assistant workflow
 - 08d46e5741de768609800de925134bc118f786c1 READMEs
+- e337a086b916923d6190c6fe078abaf0368f0d69 PLTI source
 
 ### Added
 

@@ -1,6 +1,6 @@
 {
-  "version": "v1.0.0-rc.9",
-  "versionCode": 1009,
-  "zipUrl": "https://github.com/PerformanC/ReZygisk/releases/download/v1.0.0-rc.9/ReZygisk-v1.0.0-rc.9-release.zip",
+  "version": "v1.0.0",
+  "versionCode": 100,
+  "zipUrl": "https://github.com/PerformanC/ReZygisk/releases/download/v1.0.0/ReZygisk-v1.0.0-release.zip",
   "changelog": "https://raw.githubusercontent.com/misak10/mmrl-update/main/src/ReZygisk/changelog.md"
 }
