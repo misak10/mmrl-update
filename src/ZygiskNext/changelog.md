@@ -1,15 +1,17 @@
-- 修复使用某些模块导致崩溃的问题
-- WebUI 增加 ZN 模块列表
-- 增加 Zygisk 模块错误检查机制，发现存在问题的模块会显示在 ZN 的模块状态和 WebUI 中（可检查的错误请参见[文档](https://github.com/Dr-TSNG/ZygiskNext/wiki/Module-issues)）
-- 补充 1.3.3 的更新：ZN 模块的 inline hook 功能无需额外在 sepolicy 增加 execmem 规则
+- ZN Linker 支持使用线程本地存储 (TLS) 的模块
+- 修复一个崩溃问题
+- 修复一个检测问题
+- 调整 WebUI 模块列表对齐方式
+- 更新 WebUI 翻译
 
 ---
 
-- Fixed an issue that caused crashes when using certain modules.
-- Add ZN module list to the WebUI.
-- Add Zygisk module error checking mechanism. Modules with issues will be displayed in ZN's module status and WebUI (see [the documentation](https://github.com/Dr-TSNG/ZygiskNext/wiki/Module-issues) for checkable errors).
-- Supplemented the 1.3.3 update: ZN module inline hook functionality no longer requires adding an execmem rule to sepolicy.
+- ZN Linker now supports modules using Thread Local Storage (TLS)
+- Fixed a crash issue
+- Fixed a detection issue
+- Adjusted the alignment of the WebUI module list
+- Updated WebUI translations
 
 ---
 
-SHA256: b330b368e6133b83c069c0ff1bb1bf81091afec5a8d6532d39c14bd1b7e5d367
+SHA256: 97791423c705726478b95c2fb625af29f3899baff1a61e322f0977f0cb1141b1
