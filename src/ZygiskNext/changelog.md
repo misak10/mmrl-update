@@ -1,17 +1,15 @@
-- ZN Linker 支持使用线程本地存储 (TLS) 的模块
-- 修复一个崩溃问题
-- 修复一个检测问题
-- 调整 WebUI 模块列表对齐方式
-- 更新 WebUI 翻译
+- 解决 ZN Linker 与某些模块的兼容性问题（[参见文档](https://github.com/Dr-TSNG/ZygiskNext/wiki/Zygisk-Next-Linker#141)）
+- 解决与光速虚拟机的兼容性问题
+- WebUI 补充翻译
+- 如果 zygisk 模块无法加载， WebUI 和模块状态会显示错误
 
 ---
 
-- ZN Linker now supports modules using Thread Local Storage (TLS)
-- Fixed a crash issue
-- Fixed a detection issue
-- Adjusted the alignment of the WebUI module list
-- Updated WebUI translations
+- Resolved compatibility issues between ZN Linker and certain modules ([see documentation](https://github.com/Dr-TSNG/ZygiskNext/wiki/Zygisk-Next-Linker#141-1))
+- Resolved compatibility issues with VPhoneOS
+- Supplemented translation of WebUI
+- If zygisk modules fails to load, the WebUI and module status will display errors.
 
 ---
 
-SHA256: 97791423c705726478b95c2fb625af29f3899baff1a61e322f0977f0cb1141b1
+SHA256: 9bdc393f119c4b3bdad22701aeec04036ab4133e01453062e93a686922aa4a49
