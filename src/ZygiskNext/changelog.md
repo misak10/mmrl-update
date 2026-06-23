@@ -1,15 +1,14 @@
-- 解决 ZN Linker 与某些模块的兼容性问题（[参见文档](https://github.com/Dr-TSNG/ZygiskNext/wiki/Zygisk-Next-Linker#141)）
-- 解决与光速虚拟机的兼容性问题
-- WebUI 补充翻译
-- 如果 zygisk 模块无法加载， WebUI 和模块状态会显示错误
+- 修复一个崩溃问题
+- 修复与 Android 8 / 8.1 的兼容问题
+- WebUI 更新翻译
 
 ---
 
-- Resolved compatibility issues between ZN Linker and certain modules ([see documentation](https://github.com/Dr-TSNG/ZygiskNext/wiki/Zygisk-Next-Linker#141-1))
-- Resolved compatibility issues with VPhoneOS
-- Supplemented translation of WebUI
-- If zygisk modules fails to load, the WebUI and module status will display errors.
+- Fixed a crash issue
+- Fixed compatibility issues with Android 8/8.1
+- WebUI translation update
 
 ---
 
-SHA256: 9bdc393f119c4b3bdad22701aeec04036ab4133e01453062e93a686922aa4a49
+SHA256: 44f17aacfc3e40747811445a8f3f627aba195115de2f9bcf2e6ed909a993fbab
+
