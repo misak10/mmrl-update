@@ -1,14 +1,17 @@
-- 修复一个崩溃问题
-- 修复与 Android 8 / 8.1 的兼容问题
-- WebUI 更新翻译
+- 增加模块崩溃检查，如果模块导致系统崩溃，会尝试找出导致问题的模块并显示在 WebUI 和模块描述中
+- 增加导出 bugreport 功能，增加 action ，可通过 action 或 WebUI 导出并发送 bugreport
+- 提升安全性
+- WebUI 支持 RTL 布局
+- 更新 WebUI 翻译
 
 ---
 
-- Fixed a crash issue
-- Fixed compatibility issues with Android 8/8.1
-- WebUI translation update
+- Added module crash checking. If a module causes a system crash, it will attempt to find the problematic module and display it in the WebUI and module description.
+- Added bug report export functionality and action. Bug reports can be exported and sent via action or WebUI.
+- Improved security.
+- WebUI supports RTL layout.
+- Update WebUI translations.
 
 ---
 
-SHA256: 44f17aacfc3e40747811445a8f3f627aba195115de2f9bcf2e6ed909a993fbab
-
+SHA256: 82fb9176037771a9ed4f6a530581c7826460dbc19ca5a6908b95c60b86903858
