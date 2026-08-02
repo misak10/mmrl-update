@@ -1,17 +1,21 @@
-- 增加模块崩溃检查，如果模块导致系统崩溃，会尝试找出导致问题的模块并显示在 WebUI 和模块描述中
-- 增加导出 bugreport 功能，增加 action ，可通过 action 或 WebUI 导出并发送 bugreport
+- 适配 Meta Quest 的 stub zygote
+- 修复检测问题
+- 修复光速虚拟机 arm32 转译支持
+- 适配 KernelSU 的模拟软重启
 - 提升安全性
-- WebUI 支持 RTL 布局
-- 更新 WebUI 翻译
+
+感谢 @F-19-F 和 @grayawa 在 Meta Quest 3 上的测试
 
 ---
 
-- Added module crash checking. If a module causes a system crash, it will attempt to find the problematic module and display it in the WebUI and module description.
-- Added bug report export functionality and action. Bug reports can be exported and sent via action or WebUI.
-- Improved security.
-- WebUI supports RTL layout.
-- Update WebUI translations.
+- Added support for Meta Quest stub zygote
+- Fixed detection issues
+- Fixed arm32 translation support for VPhone
+- Added support for KernelSU's emulated soft reboot
+- Enhanced security
+
+Thanks to @F-19-F and @grayawa for testing on Meta Quest 3.
 
 ---
 
-SHA256: 82fb9176037771a9ed4f6a530581c7826460dbc19ca5a6908b95c60b86903858
+SHA256: 7b30d1d11e8fd18a9a971e8feee25e6e4d7e10d601f905ef4aacd806132df5bb
