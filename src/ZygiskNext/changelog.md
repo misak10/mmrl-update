@@ -1,21 +1,11 @@
-- 适配 Meta Quest 的 stub zygote
-- 修复检测问题
-- 修复光速虚拟机 arm32 转译支持
-- 适配 KernelSU 的模拟软重启
-- 提升安全性
-
-感谢 @F-19-F 和 @grayawa 在 Meta Quest 3 上的测试
+- 支持 android 17 QPR2 Beta2
+- 修复一些其他兼容性问题
 
 ---
 
-- Added support for Meta Quest stub zygote
-- Fixed detection issues
-- Fixed arm32 translation support for VPhone
-- Added support for KernelSU's emulated soft reboot
-- Enhanced security
-
-Thanks to @F-19-F and @grayawa for testing on Meta Quest 3.
+- Supports Android 17 QPR2 beta2
+- Fixed some other compatibility issues
 
 ---
 
-SHA256: 7b30d1d11e8fd18a9a971e8feee25e6e4d7e10d601f905ef4aacd806132df5bb
+SHA256: ac7be9b91c059586f268df73586752b2bd9eaeb3fac13b40cd85730c98428945
