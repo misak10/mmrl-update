@@ -1,1 +1,1 @@
-See https://lamda.run/news for release details.
+See https://device-farm.com/news for release details.
