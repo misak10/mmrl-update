@@ -1,6 +1,6 @@
 {
-  "version": "v10.4",
-  "versionCode": 104,
-  "zipUrl": "https://github.com/firerpa/lamda/releases/download/v10.4/lamda-magisk-module.zip",
+  "version": "v10.6",
+  "versionCode": 106,
+  "zipUrl": "https://github.com/firerpa/lamda/releases/download/v10.6/lamda-magisk-module.zip",
   "changelog": "https://raw.githubusercontent.com/misak10/mmrl-update/main/src/lamda/changelog.md"
 }
